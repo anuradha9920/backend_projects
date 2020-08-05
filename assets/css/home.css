@@ -1,0 +1,117 @@
+body{
+    margin:0;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+ul{
+    list-style-type: none;
+    width:600px;
+}
+li{
+    background-color: rgb(211, 168, 252);
+    display: flex;
+    margin:0;
+    margin-top:10px;
+    margin-bottom: 10px;
+    align-items: center;
+    border-radius:10px;
+    justify-content: space-between;
+    height:80px;
+    width:100%;
+}
+.delete-button a{
+    margin:0;
+    margin-left: 20px;
+    margin-right: 20px;
+    color:transparent;
+}
+li:hover .delete-button a{
+    color:rgb(138, 134, 134);
+}
+.info-container{
+    display:flex;
+}
+li:hover{
+    background-color: rgb(229, 211, 245);
+}
+.info-container img,div{
+    margin:5px;
+    margin-left: 20px;
+}
+.search{
+    height:30px;
+    width:400px;
+    border:1px solid black;
+    border-radius: 10px;
+    overflow:hidden;
+    display: flex;
+    justify-content: space-between;
+}
+.search button{
+    background:white;
+    border:0;
+    outline:0;
+    width:10%;
+    margin:0;
+    height:30px;
+
+}
+.search input{
+    width: 80%;
+    outline:0;
+    border: 0;
+    font-size: 1rem;
+    margin:0;
+    margin-left:2%;
+}
+.search input:focus{
+    outline:0;
+}
+.search button i{
+    color:black;
+    font-size: 1.4rem;
+}
+#page-heading{
+    text-align: center;
+    margin-top:25px;
+    color:grey;
+}
+.image-style{
+    height:50px;
+    border-radius: 50%;
+}
+.contact-name{
+    font-size: 1.5rem;
+    margin: 0;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+.contact-phone{
+    font-size: 1rem;
+    margin:0;
+}
+
+.add-contact-form input[type="text"],input[type="number"]{
+    border:0;
+    border-bottom: 1px solid black;
+    display: block;
+    width:90%;
+    font-size: 1.5rem;
+    margin:30px;
+}
+fieldset{
+    width:600px;
+    position: relative;
+    left:40px;
+    display: flex;
+}
+button{
+    width:100px;
+    height:40px;
+    font-size: 1rem;
+    color:white;
+    background:black;
+}

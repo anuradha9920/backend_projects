@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title><%=title%></title>
+        <script src="https://kit.fontawesome.com/c5c0c2ae0d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+        <h1 id="page-heading">
+            <i class="fas fa-address-book"></i>&nbsp MY Contact List
+        </h1>
+        <form action="/search" method="GET">
+            <div class="search">
+                <input type="text" name="NamePhone" placeholder="Search..." id="search-button">
+                <button type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </form>
+        <div>
+            <ul>
+                <% for(let i of contact_list) { %>
+                    <li>
+                        <div class="info-container">
+                            <!-- <img src="<%= i.image %>" class="image-style"> -->
+                            <img src="/images/default_contact_image.png" class="image-style">
+                            <div>
+                                <p class="contact-name">
+                                    <%= i.name %>
+                                </p>
+                                <p class="contact-phone">
+                                    <%= i.phone %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="delete-button">
+                            <a href="/delete-contact/?id=<%= i._id %>">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </div>
+                    </li>
+                <% } %>    
+            </ul>
+        </div>
+        <form action="/create-contact" method="POST" class="add-contact-form">
+            <fieldset>
+                <legend>ADD CONTACT</legend>
+                <input type="text" name="name" placeholder="Enter Name..." required>
+                <input type="number"  name="phone" placeholder="Enter phone..." required>
+                <button type="submit">
+                    ADD
+                </button>
+            </fieldset>
+        </form>
+        
+        <script type="text/javascript" src="/js/home.js">
+
+        </script>
+    </body>
+</html>
